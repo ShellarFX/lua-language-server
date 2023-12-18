@@ -151,7 +151,7 @@ end, function (self, value)
         end
         return t
     end
-    if type(value) == 'string' then
+    if type(value) == 'string' and self.sep then
         local t = {}
         for s in value:gmatch('[^' .. self.sep .. ']+') do
             t[s] = true
